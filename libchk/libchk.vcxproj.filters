@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\chk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cuwpchunk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dimchunk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\iownchunk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\locationschunk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ownrchunk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stringschunk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\chk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\constants.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cuwpchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cuwpusedchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dimchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\enums.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ichunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\iownchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\langumschunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\locationschunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ownrchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stringschunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tilesetchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\triggerschunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\verchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\wavchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

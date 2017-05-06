@@ -1,0 +1,8 @@
+libchk/Debug/
+libchk/Release/
+*.obj
+*.lib
+libchk.vcxproj.user
+*.opendb
+*.db
+.vs/
