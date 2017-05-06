@@ -108,4 +108,83 @@ namespace CHK
         }
     }
 
+    size_t File::GetSize() const
+    {
+        size_t size = 0;
+        for (auto& pair : m_Chunks)
+        {
+            for (auto& chunk : pair.second)
+            {
+                size += 8; // chunk id + chunk size
+                size += chunk->GetBytes().size();
+            }
+        }
+
+        return size;
+    }
+
+    void File::Serialize(std::vector<char>& outBytes)
+    {
+        outBytes.resize(GetSize());
+
+        size_t offset = 0u;
+
+        for (auto& pair : m_Chunks)
+        {
+            for (auto& chunk : pair.second)
+            {
+                memcpy(outBytes.data() + offset, chunk->GetType().c_str(), 4);
+                offset += 4;
+
+                auto& bytes = chunk->GetBytes();
+                auto size = (uint32_t)bytes.size();
+
+                memcpy(outBytes.data() + offset, &size, 4);
+                offset += 4;
+
+                memcpy(outBytes.data() + offset, bytes.data(), bytes.size());
+                offset += bytes.size();
+            }
+        }
+    }
+
+    void File::AddChunk(std::unique_ptr<IChunk> chunk)
+    {
+        m_ChunkTypes.insert(chunk->GetType());
+        m_Chunks[chunk->GetType()].push_back(std::move(chunk));
+    }
+
+    bool File::HasChunk(ChunkType type) const
+    {
+        switch (type)
+        {
+        case ChunkType::DimChunk:
+            return HasChunk("DIM ");
+        case ChunkType::IOwnChunk:
+            return HasChunk("IOWN");
+        case ChunkType::OwnrChunk:
+            return HasChunk("OWNR");
+        case ChunkType::StringsChunk:
+            return HasChunk("STR ");
+        case ChunkType::WavChunk:
+            return HasChunk("WAV ");
+        case ChunkType::VerChunk:
+            return HasChunk("VER ");
+        case ChunkType::TriggersChunk:
+            return HasChunk("TRIG");
+        case ChunkType::TilesetsChunk:
+            return HasChunk("ERA ");
+        case ChunkType::LocationsChunk:
+            return HasChunk("MRGN");
+        case ChunkType::CuwpChunk:
+            return HasChunk("UPRP");
+        case ChunkType::CuwpUsedChunk:
+            return HasChunk("UPUS");
+        case ChunkType::LangumsChunk:
+            return HasChunk("LANG");
+        }
+
+        return false;
+    }
+
 }
