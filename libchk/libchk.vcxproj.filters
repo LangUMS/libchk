@@ -28,9 +28,6 @@
     <ClCompile Include="..\src\stringschunk.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\sprpchunk.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\chk.h">

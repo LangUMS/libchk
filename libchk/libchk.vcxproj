@@ -126,7 +126,6 @@
     <ClCompile Include="..\src\iownchunk.cpp" />
     <ClCompile Include="..\src\locationschunk.cpp" />
     <ClCompile Include="..\src\ownrchunk.cpp" />
-    <ClCompile Include="..\src\sprpchunk.cpp" />
     <ClCompile Include="..\src\stringschunk.cpp" />
   </ItemGroup>
   <ItemGroup>

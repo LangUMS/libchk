@@ -20,19 +20,28 @@ namespace CHK
 
         uint16_t GetScenarioStringId() const
         {
-            return m_ScenarioStringId;
+            auto& bytes = GetBytes();
+            return *((uint16_t*)bytes.data());
+        }
+
+        void SetScenarioStringId(uint16_t stringId)
+        {
+            auto& bytes = GetBytes();
+            *((uint16_t*)bytes.data()) = stringId;
         }
 
         uint16_t GetScenarioDescriptionStringId() const
         {
-            return m_ScenarioDescriptionStringId;
+            auto& bytes = GetBytes();
+            return *((uint16_t*)bytes.data() + 1);
         }
 
-        void SetBytes(const std::vector<char>& data);
+        void SetScenarioDescriptionStringId(uint16_t stringId) const
+        {
+            auto& bytes = GetBytes();
+            *((uint16_t*)bytes.data() + 1) = stringId;
+        }
 
-        private:
-        uint16_t m_ScenarioStringId = 0;
-        uint16_t m_ScenarioDescriptionStringId = 0;
     };
 
 }
