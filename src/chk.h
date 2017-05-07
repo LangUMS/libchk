@@ -20,6 +20,7 @@
 #include "wavchunk.h"
 #include "tilesetchunk.h"
 #include "langumschunk.h"
+#include "sprpchunk.h"
 
 namespace CHK
 {
@@ -74,6 +75,8 @@ namespace CHK
                     return GetFirstChunk<T>("UPUS");
                 case ChunkType::LangumsChunk:
                     return GetFirstChunk<T>("LANG");
+                case ChunkType::SprpChunk:
+                    return GetFirstChunk<T>("SPRP");
             }
 
             return nullptr;

@@ -126,6 +126,7 @@
     <ClCompile Include="..\src\iownchunk.cpp" />
     <ClCompile Include="..\src\locationschunk.cpp" />
     <ClCompile Include="..\src\ownrchunk.cpp" />
+    <ClCompile Include="..\src\sprpchunk.cpp" />
     <ClCompile Include="..\src\stringschunk.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +141,7 @@
     <ClInclude Include="..\src\langumschunk.h" />
     <ClInclude Include="..\src\locationschunk.h" />
     <ClInclude Include="..\src\ownrchunk.h" />
+    <ClInclude Include="..\src\sprpchunk.h" />
     <ClInclude Include="..\src\stringschunk.h" />
     <ClInclude Include="..\src\tilesetchunk.h" />
     <ClInclude Include="..\src\triggerschunk.h" />

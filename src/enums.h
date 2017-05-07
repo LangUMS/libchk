@@ -19,7 +19,8 @@ namespace CHK
         LocationsChunk,
         CuwpChunk,
         CuwpUsedChunk,
-        LangumsChunk
+        LangumsChunk,
+        SprpChunk
     };
 
     enum class TriggerConditionType : uint8_t

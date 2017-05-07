@@ -70,6 +70,10 @@ namespace CHK
             {
                 chunk = std::make_unique<CHKTilesetChunk>(bytes, type);
             }
+            else if (type == "SPRP")
+            {
+                chunk = std::make_unique<CHKSprpChunk>(bytes, type);
+            }
             else if
             ( // skip all non-required chunks to lower file-size
                 type == "TYPE" ||
@@ -182,6 +186,8 @@ namespace CHK
             return HasChunk("UPUS");
         case ChunkType::LangumsChunk:
             return HasChunk("LANG");
+        case ChunkType::SprpChunk:
+            return HasChunk("SPRP");
         }
 
         return false;
