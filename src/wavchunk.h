@@ -1,19 +1,15 @@
 #ifndef __LIBCHK_WAVCHUNK_H
 #define __LIBCHK_WAVCHUNK_H
 
-#include <unordered_map>
-#include <string>
-
 #include "ichunk.h"
-#include "serialization.h"
 
 namespace CHK
 {
 
-    class CHKWavChunk : public IChunk
+    class WAVChunk : public IChunk
     {
         public:
-        CHKWavChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
+        WAVChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
         {
             SetBytes(data);
         }
@@ -42,7 +38,6 @@ namespace CHK
 
             return -1;
         }
-
     };
 
 }

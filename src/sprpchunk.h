@@ -1,19 +1,15 @@
 #ifndef __LIBCHK_SPRPCHUNK_H
 #define __LIBCHK_SPRPCHUNK_H
 
-#include <unordered_map>
-#include <string>
-
 #include "ichunk.h"
-#include "serialization.h"
 
 namespace CHK
 {
 
-    class CHKSprpChunk : public IChunk
+    class SPRPChunk : public IChunk
     {
         public:
-        CHKSprpChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
+        SPRPChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
         {
             SetBytes(data);
         }
@@ -41,7 +37,6 @@ namespace CHK
             auto& bytes = GetBytes();
             *((uint16_t*)bytes.data() + 1) = stringId;
         }
-
     };
 
 }

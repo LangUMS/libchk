@@ -1,11 +1,7 @@
-#ifndef __LIBCHK_CUWPCHUNK_H
-#define __LIBCHK_CUWPCHUNK_H
-
-#include <unordered_map>
-#include <string>
+#ifndef __LIBCHK_UPRPCHUNK_H
+#define __LIBCHK_URRPCHUNK_H
 
 #include "ichunk.h"
-#include "serialization.h"
 
 namespace CHK
 {
@@ -52,10 +48,10 @@ namespace CHK
         uint32_t m_Unused;
     };
 
-    class CHKCuwpChunk : public IChunk
+    class UPRPChunk : public IChunk
     {
         public:
-        CHKCuwpChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
+        UPRPChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
         {
             SetBytes(data);
         }
@@ -70,8 +66,6 @@ namespace CHK
             auto& bytes = GetBytes();
             return (CUWPSlot*)(bytes.data() + index * sizeof(CUWPSlot));
         }
-
-        void SetBytes(const std::vector<char>& data);
     };
 
 }

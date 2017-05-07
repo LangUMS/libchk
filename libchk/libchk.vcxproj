@@ -120,30 +120,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\chk.cpp" />
-    <ClCompile Include="..\src\cuwpchunk.cpp" />
-    <ClCompile Include="..\src\dimchunk.cpp" />
-    <ClCompile Include="..\src\iownchunk.cpp" />
-    <ClCompile Include="..\src\locationschunk.cpp" />
-    <ClCompile Include="..\src\ownrchunk.cpp" />
-    <ClCompile Include="..\src\stringschunk.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\src\chk.h" />
     <ClInclude Include="..\src\constants.h" />
-    <ClInclude Include="..\src\cuwpchunk.h" />
-    <ClInclude Include="..\src\cuwpusedchunk.h" />
+    <ClInclude Include="..\src\uprpchunk.h" />
+    <ClInclude Include="..\src\upuschunk.h" />
     <ClInclude Include="..\src\dimchunk.h" />
     <ClInclude Include="..\src\enums.h" />
     <ClInclude Include="..\src\ichunk.h" />
     <ClInclude Include="..\src\iownchunk.h" />
-    <ClInclude Include="..\src\langumschunk.h" />
-    <ClInclude Include="..\src\locationschunk.h" />
+    <ClInclude Include="..\src\mrgnchunk.h" />
     <ClInclude Include="..\src\ownrchunk.h" />
     <ClInclude Include="..\src\sprpchunk.h" />
-    <ClInclude Include="..\src\stringschunk.h" />
-    <ClInclude Include="..\src\tilesetchunk.h" />
-    <ClInclude Include="..\src\triggerschunk.h" />
+    <ClInclude Include="..\src\strchunk.h" />
+    <ClInclude Include="..\src\erachunk.h" />
+    <ClInclude Include="..\src\trigchunk.h" />
     <ClInclude Include="..\src\verchunk.h" />
     <ClInclude Include="..\src\wavchunk.h" />
   </ItemGroup>

@@ -7,39 +7,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\chk.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\cuwpchunk.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\dimchunk.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\iownchunk.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\locationschunk.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ownrchunk.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\stringschunk.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\src\chk.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\constants.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\cuwpchunk.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\cuwpusedchunk.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\dimchunk.h">
@@ -54,22 +25,7 @@
     <ClInclude Include="..\src\iownchunk.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\langumschunk.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\locationschunk.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\ownrchunk.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\stringschunk.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\tilesetchunk.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\triggerschunk.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\verchunk.h">
@@ -79,6 +35,24 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\sprpchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\uprpchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\upuschunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\mrgnchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\strchunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\erachunk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\trigchunk.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

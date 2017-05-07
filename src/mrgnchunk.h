@@ -1,26 +1,12 @@
-#ifndef __LIBCHK_LOCATIONSCHUNK_H
-#define __LIBCHK_LOCATIONSCHUNK_H
-
-#include <unordered_map>
-#include <string>
+#ifndef __LIBCHK_MRGNCHUNK_H
+#define __LIBCHK_MRGNCHUNK_H
 
 #include "ichunk.h"
-#include "serialization.h"
 
 #define ANYWHERE_LOCATION 64
 
 namespace CHK
 {
-
-    enum class LocationElevation
-    {
-        Low = (1 << 0),
-        Medium = (1 << 1),
-        High = (1 << 2),
-        LowAir = (1 << 3),
-        MediumAir = (1 << 4),
-        HighAir = (1 << 5)
-    };
 
     struct Location
     {
@@ -32,15 +18,28 @@ namespace CHK
         uint16_t m_Elevation;
     };
 
-    class CHKLocationsChunk : public IChunk
+    class MRGNChunk : public IChunk
     {
         public:
-        CHKLocationsChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
+        MRGNChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
         {
             SetBytes(data);
         }
 
-        int FindLocation(unsigned int stringIndex) const;
+        int FindLocation(unsigned int stringIndex) const
+        {
+            auto count = GetLocationsCount();
+            for (auto i = 0u; i < count; i++)
+            {
+                auto loc = GetLocation(i);
+                if (loc && loc->m_StringIndex == stringIndex)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
 
         size_t GetLocationsCount() const
         {
@@ -64,8 +63,6 @@ namespace CHK
             auto loc = (Location*)(bytes.data() + sizeof(Location) * index);
             *loc = location;
         }
-
-        void SetBytes(const std::vector<char>& data);
     };
 
 }

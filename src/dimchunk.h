@@ -1,19 +1,15 @@
 #ifndef __LIBCHK_DIMCHUNK_H
 #define __LIBCHK_DIMCHUNK_H
 
-#include <unordered_map>
-#include <string>
-
 #include "ichunk.h"
-#include "serialization.h"
 
 namespace CHK
 {
 
-    class CHKDimChunk : public IChunk
+    class DIMChunk : public IChunk
     {
         public:
-        CHKDimChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
+        DIMChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
         {
             SetBytes(data);
         }
@@ -28,7 +24,12 @@ namespace CHK
             return m_Height;
         }
 
-        void SetBytes(const std::vector<char>& data);
+        void SetBytes(const std::vector<char>& data)
+        {
+            m_Width = *((uint16_t*)data.data());
+            m_Height = *((uint16_t*)(data.data() + 2));
+            IChunk::SetBytes(data);
+        }
 
         private:
         uint16_t m_Width = 0;

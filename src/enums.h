@@ -8,19 +8,28 @@ namespace CHK
 
     enum class ChunkType : uint8_t
     {
-        DimChunk = 0,
-        IOwnChunk,
-        OwnrChunk,
-        StringsChunk,
-        WavChunk,
-        VerChunk,
-        TriggersChunk,
-        TilesetsChunk,
-        LocationsChunk,
-        CuwpChunk,
-        CuwpUsedChunk,
-        LangumsChunk,
-        SprpChunk
+        DIM = 0,
+        IOWN,
+        OWNR,
+        STR,
+        WAV,
+        VER,
+        TRIG,
+        ERA,
+        MRGN,
+        UPRP,
+        UPUS,
+        SPRP
+    };
+
+    enum class LocationElevation
+    {
+        Low = (1 << 0),
+        Medium = (1 << 1),
+        High = (1 << 2),
+        LowAir = (1 << 3),
+        MediumAir = (1 << 4),
+        HighAir = (1 << 5)
     };
 
     enum class TriggerConditionType : uint8_t

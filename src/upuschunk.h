@@ -1,19 +1,15 @@
-#ifndef __LIBCHK_CUWPUSEDCHUNK_H
-#define __LIBCHK_CUWPUSEDCHUNK_H
-
-#include <unordered_map>
-#include <string>
+#ifndef __LIBCHK_UPUSCHUNK_H
+#define __LIBCHK_UPUSCHUNK_H
 
 #include "ichunk.h"
-#include "serialization.h"
 
 namespace CHK
 {
 
-    class CHKCuwpUsedChunk : public IChunk
+    class UPUSChunk : public IChunk
     {
         public:
-        CHKCuwpUsedChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
+        UPUSChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
         {
             SetBytes(data);
             memcpy(m_UsedSlots, data.data(), 64);
@@ -60,6 +56,7 @@ namespace CHK
             m_UsedSlots[index] = used ? 1 : 0;
         }
 
+        private:
         uint8_t m_UsedSlots[64];
     };
 

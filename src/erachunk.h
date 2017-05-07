@@ -1,5 +1,7 @@
-#ifndef __LIBCHK_TILESETCHUNK_H
-#define __LIBCHK_TILESETCHUNK_H
+#ifndef __LIBCHK_ERACHUNK_H
+#define __LIBCHK_ERACHUNK_H
+
+#include "ichunk.h"
 
 namespace CHK
 {
@@ -16,10 +18,10 @@ namespace CHK
         Twilight,
     };
 
-    class CHKTilesetChunk : public IChunk
+    class ERAChunk : public IChunk
     {
         public:
-        CHKTilesetChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
+        ERAChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
         {
             SetBytes(data);
         }

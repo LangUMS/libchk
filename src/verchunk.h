@@ -6,10 +6,10 @@
 namespace CHK
 {
 
-    class CHKVerChunk : public IChunk
+    class VERChunk : public IChunk
     {
         public:
-        CHKVerChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
+        VERChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
         {
             SetBytes(data);
         }

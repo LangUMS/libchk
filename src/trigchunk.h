@@ -1,5 +1,5 @@
-#ifndef __LIBCHK_TRIGGERSCHUNK_H
-#define __LIBCHK_TRIGGERSCHUNK_H
+#ifndef __LIBCHK_TRIGCHUNK_H
+#define __LIBCHK_TRIGCHUNK_H
 
 #include "ichunk.h"
 #include "enums.h"
@@ -67,10 +67,10 @@ namespace CHK
         uint8_t m_ExecutionMask[28] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     };
 
-    class CHKTriggersChunk : public IChunk
+    class TRIGChunk : public IChunk
     {
         public:
-        CHKTriggersChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
+        TRIGChunk(const std::vector<char>& data, const std::string& type) : IChunk(type)
         {
             SetBytes(data);
         }
